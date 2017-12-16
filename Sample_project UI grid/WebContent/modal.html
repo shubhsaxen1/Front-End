@@ -1,0 +1,224 @@
+	<script src="./css/my.css"></script>
+	<script src="./js/bootstrap.min.css"></script>
+	
+	<div class="modal-header">
+	
+	    <h4>Trade Details</h4>
+	</div>
+	<nav id="modalstyle">
+  <div class="modal-body" >
+    <div class="block">
+    <form name="serviceForm">
+    
+<table id="tabledetails" >
+
+<tr>
+<td class="tablabel" style="text-align:left">Reference:</td>
+<td class="shrink" ><input name="ref" size="5" type="text" value={{selectedRow.tradeDetail.fOReference}} /> &nbsp;<b>/</b></td>
+<td ><input maxlength="2" name="field" size="2" type="text" value="00" /></td>
+<td  class="tablabel" >Leg:</td>
+<td class="shrink" ><input name="num" size="3" type="text" value="1" /></td>
+<td class="tablabel">ISMA:</td>
+<td class="shrink"><input name="num2" size="10" type="text" value={{selectedRow.tradeDetail.ismaref}} /></td>
+<td class="shrink" ><input name="num3" size="2" type="text" value="1" /></td>
+<td  class="tablabel">Trade Date:</td>
+<td class="shrink"><input name="date" size="10" type="text" value={{selectedRow.tradeDetail.fromDate}}/></td>
+<td class="shrink"><input name="time" size="10" type="text" value="15:00:09" /></td>
+</tr>
+<tr>
+<td class="tablabel">Source System:</td>
+<td class="shrink"><input name="ss" size="3/" type="text" value={{selectedRow.tradeDetail.source}} /></td>
+<td  align=right class="tablabel">Trader:</td>
+<td class="expand" colspan=2 ><input name="trader" size="30" type="text" value={{selectedRow.tradeDetail.trader}} /></td>
+<td >&nbsp;</td>
+<td  colspan="3" class="tablabel">Entry Date:</td>
+<td class="shrink" ><input name="edate" size="10/" type="text" /></td>
+<td class="shrink"><input name="time2" size="10" type="text" /></td>
+</tr>
+<tr>
+<td  class="tablabel"  style="text-align:left">Trade Status:</td>
+<td  class="shrink" ><input name="ts" size="3/" type="text" value={{selectedRow.tradeDetail.status}} /></td>
+<td  class="expand"  colspan="2">Reported to TRAX. &nbsp;</td>
+<td colspan="5">&nbsp;</td>
+<td class="tablabel">Late:</td>
+<td  class="shrink"><input name="late" size="5" type="text" value={{selectedRow.tradeDetail.late}} /></td>
+</tr>
+
+</table>
+    </form>
+    </div>
+  
+    <div class="block">
+    <form name="serviceForm2">
+    
+<table id="tabledetails" ><!-- Middle Table Section-- Start -->
+
+<tr >
+<td  style="text-align:left" class="tablabel">Purchase/Sell:</td>
+<td  class="shrink"><input size="2/" type="text" value="S" /></td>
+<td class="tablabel" >Nominal:</td>
+<td   class="shrink" colspan="2"><input class="textalign" size="8/" type="text" value={{selectedRow.tradeDetail.nominal}} /></td>
+<td  align="right" class="tablabel">Price:</td>
+<td   class="shrink" colspan="2"><input size="10/" type="text" value={{selectedRow.tradeDetail.price}} /></td>
+<td colspan="2">&nbsp;</td>
+<td class="tablabel" >Currency:</td>
+<td  class="shrink"><input size="3/" type="text" value={{selectedRow.tradeDetail.currency}} /></td>
+
+</tr>
+<tr >
+<td style="text-align:left" class="tablabel">Subscriber:</td>
+<td ><input name="ss" size="7" type="text" value={{selectedRow.tradeDetail.subscriber}} LON" /></td>
+<td colspan=5>&nbsp;</td>
+<td class="tablabel" colspan=3 align="right" class="tablabel">Gross Consideration:</td>
+<td colspan=2><input  class="textalign" size="25/" type="text" value={{selectedRow.tradeDetail.grossConsideration}} /></td>
+</tr>
+<tr >
+<td style="text-align:left" class="tablabel">Entity Code:</td>
+<td ><input name="ts" size="4/" type="text" value={{selectedRow.tradeDetail.entityCode}} /></td>
+<td class="tablabel">Book:</td>
+<td ><input size="6/" type="text" value={{selectedRow.tradeDetail.book}} /></td>
+<td colspan=4>&nbsp;</td>
+<td colspan="2"  class="tablabel">Net Consideration:</td>
+<td colspan=2 ><input class="textalign" size="15/" type="text" value={{selectedRow.tradeDetail.netConsideration}} /></td>
+</tr>
+<tr >
+<td  style="text-align:left"  class="tablabel">Counterparty:</td>
+<td ><input size="6" type="text" value={{selectedRow.tradeDetail.counterparty}} /></td>
+<td ><input size="7/" type="text" value="SBC LON" /></td>
+<td colspan="5">&nbsp;</td>
+<td colspan="3" class="tablabel">Bargain Conditions:</td>
+<td><input size="2/" type="text" value={{selectedRow.tradeDetail.bargainCondition}} /></td>
+</tr>
+<tr >
+<td style="text-align:left"  class="tablabel">Issue:</td>
+<td ><input size="10" type="text" value={{selectedRow.tradeDetail.issue}}/></td>
+<td ><input size="4/" type="text" value="ISIN" /></td>
+<td  colspan="3">&nbsp;</td>
+<td class="tablabel">Hugo:</td>
+<td ><input size="6" type="text" value="748563" /></td>
+<td  class="tablabel">NTPA:</td>
+<td ><input size="6/" type="text" value="7463" /></td>
+<td  class="tablabel">Type:</td>
+<td ><input size="2" type="text" value={{selectedRow.tradeDetail.type1}} /></td>
+</tr>
+<tr  >
+<td style="text-align:left" >&nbsp;</td>
+<td style="text-align: left;"  colspan="11">&nbsp;</td>
+</tr>
+<tr>
+<td  style="text-align:left" style="height: 4px; width: 92px;" class="tablabel">Repo Type:</td>
+<td ><input size="2" type="text" value={{selectedRow.tradeDetail.repoType}} /></td>
+<td  class="tablabel">Open/Close:</td>
+<td ><input size="2/" type="text" value={{selectedRow.tradeDetail.openclose}} /></td>
+<td  colspan="3">&nbsp;</td>
+<td colspan="4" class="tablabel">Repo Interest Rate:</td>
+<td ><input size="8/" type="text" value={{selectedRow.tradeDetail.repoInterestRate}} /></td>
+</tr>
+
+</table>
+<!-- Middle Table Section -- End -->
+	
+    </form>
+    </div>
+    
+
+    <div class="block">
+    <form name="serviceForm3">
+    <table id="tabledetails">
+
+<tr >
+<td style="text-align:left"  class="tablabel">Settlement Date:</td>
+<td ><input name="ref" size="10/" type="text" value={{selectedRow.tradeDetail.settlementDate}} /></td>
+<td colspan=3>&nbsp;</td>
+<td  class="tablabel">Type:</td>
+<td ><input name="num" size="2/" type="text" value={{selectedRow.tradeDetail.type}} /></td>
+<td colspan=2>&nbsp;</td>
+<td  class="tablabel">Rate:</td>
+<td colspan=2><input name="time" size="10" type="text" value={{selectedRow.tradeDetail.rate}} /></td>
+</tr>
+<tr>
+<td style="text-align:left" style="width: 198px; height: 27px;" class="tablabel">Our Depot:</td>
+<td ><input name="ss" size="2/" type="text" value={{selectedRow.tradeDetail.ourDepot}} /></td>
+<td colspan=3 ><input name="trader" size="15/" type="text" value="Other Domestic" /></td>
+<td colspan=2 class="tablabel">C'party Depot:</td>
+<td colspan=2>&nbsp;</td>
+<td ><input name="ss" size="2" type="text" value={{selectedRow.tradeDetail.counterpartyDepot}} /></td>
+<td colspan=2><input name="trader" type="text" value="Other Domestic size" /></td>
+</tr>
+<tr >
+<td  style="text-align:left" class="tablabel">Settlement Currency:</td>
+<td ><input name="ts" size="3/" type="text" value={{selectedRow.tradeDetail.settllementCurrency}} /></td>
+<td  colspan="6">&nbsp;</td>
+<td  colspan=3 class="tablabel">Country of Settlement:</td>
+<td ><input name="late" size="3" type="text" value={{selectedRow.tradeDetail.countryofSettlement}} /></td>
+</tr>
+
+</table>
+			
+    </form>
+    </div>
+    
+    
+        
+    
+    </div>
+     </nav>
+    
+<div class="modal-footer">
+	    <button class="btn btn-primary btnCustom" ng-click="ok()">Resend</button>
+	    <button class="btn btn-primary btnCustom" ng-click="cancel()">Cancel</button>
+	</div>
+   
+    
+  <!-- 
+    
+<panel>
+	<div class="block">
+  		<label>Trade Id</label>
+  		<input class="input" type="text" disabled value="{{selectedRow.TradeId}}" />
+	</div>
+	<div class="block">
+  		<label>From Date</label>
+  		<input class="input" type="text" ng-model="selectedRow.FromDate"/>
+	</div>
+	</panel>
+	<div class="block">
+  		<label>To Date</label>
+  		<input class="input" type="text" ng-model="selectedRow.Todate"/>
+	</div>
+	<div class="block">
+  		<label>Status</label>
+  		<input class="input" type="text" ng-model="selectedRow.Status"/>
+	</div>
+	<div class="block">
+  		<label>Repoflag</label>
+  		<input class="input" type="text" ng-model="selectedRow.Repoflag"/>
+	</div>
+	<div class="block">
+  		<label>Security</label>
+  		<input class="input" type="text" ng-model="selectedRow.Security"/>
+	</div>
+	<div class="block">
+  		<label>CParty</label>
+  		<input class="input" type="text" ng-model="selectedRow.CParty"/>
+	</div>
+	<div class="block">
+  		<label>Quantity</label>
+  		<input class="input" type="text" ng-model="selectedRow.Quantity"/>
+	</div>
+		<div class="block">
+  		<label>Price</label>
+  		<input class="input" type="text" ng-model="selectedRow.Price"/>
+	</div>
+	</form>
+	
+  </div>
+
+
+
+<div class="modal-footer">
+	    <button class="btn btn-primary btnCustom" ng-click="ok()">Resend</button>
+	    <button class="btn btn-primary btnCustom" ng-click="cancel()">Cancel</button>
+	</div>
+
+ -->  

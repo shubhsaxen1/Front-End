@@ -1,0 +1,252 @@
+@import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");/*!
+ * bootswatch v3.2.0
+ * Homepage: http://bootswatch.com
+ * Copyright 2012-2014 Thomas Park
+ * Licensed under MIT
+ * Based on Bootstrap
+*//*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+h1{
+	font-size: 30pt
+}
+
+
+input, label {
+    float:left;
+    margin:5px;
+ 
+}
+
+table, th, td {
+    border: 3;
+    border-collapse: collapse;
+    border-color: black;
+      cellspacing: 5;
+      cellpadding: 5;
+}
+th, td {
+    padding: -2px;
+}
+
+.linkName:hover, .highlight {
+  background-color:lightgray;
+}
+
+
+
+
+.gridStyle {
+    border: 2px solid rgb(212,212,212);
+    width: 800px; 
+    height: 400px
+}
+
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+
+.grid {
+
+   border: 2px solid rgb(212,212,212);
+    width: 1200px; 
+    height: 400px
+}
+
+.grey .ui-grid-cell-contents
+{
+  background-color:#CD5C5C;
+}
+
+div.block{
+  overflow:hidden;
+}
+div.block label{
+  width:160px;
+  display:block;
+  float:left;
+  text-align:left;
+  font-weight:bold;
+}
+div.block .input{
+  margin-left:4px;
+  float:left;
+}
+
+
+.panel {
+  display: inline-block;
+  background: #c0c0c0;
+  min-height: 50px;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+}
+.panel1 {
+  min-width: 100px;
+   background: #c0c0c0;
+  width: 400px;
+  height: 40px;
+  margin-bottom: 0;
+  box-shadow: 1;
+}
+.panel2 {
+  min-width: 100px;
+  width: 60px;
+}
+
+#grid
+{
+	margin-top: 15px;
+}
+
+.button
+{
+	margin-top: 10px;
+	
+}
+
+.tablabel
+{
+	font-weight:bolder;
+	    text-align: right;
+	    width:9%
+}
+#tabledetails
+{
+	
+	border: 1px solid black;
+	margin:5px;
+	cellpadding:3px ;
+	cellspacing:3px;
+	 align:left;
+	 font-size: 9pt; 
+	 width:70%;
+}
+#modalstyle input,label
+{
+	 float:left;
+       width:80%;
+}
+#modalstyle input.textalign
+{
+	text-align: right;
+}
+
+#modalstyle table 
+{
+	 
+    text-align: left;
+	margin-left:auto;
+	margin-right:auto;
+float: left;
+    width:100%;
+    table-layout: fixed;
+
+}
+#modalstyle table td.shrink {
+	  min-width: 250px;
+    white-space:nowrap;
+  
+}
+#modalstyle table td.expand {
+    width: 20%
+
+}
+#modalstyle b{
+	font-weight: 800;
+	font-size: 14pt
+}
+}
+#primary_nav_wrap
+{
+	margin-top:15px;
+}
+
+#primary_nav_wrap ul
+{
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+	
+	
+}
+
+#primary_nav_wrap ul a
+{
+	display:inline-block;
+	color:#333;
+	text-decoration:none;
+	 vertical-align:top;
+	font-weight:700;
+	font-size:14px;
+	line-height:32px;
+	padding:0 15px;
+	  position:relative;
+	
+}
+
+#primary_nav_wrap ul li
+{  display:inline-block;
+    position:relative;
+	float:left;
+	margin:0;
+	padding:0
+	
+}
+
+#primary_nav_wrap ul li.current-menu-item
+{
+	background:#488dcc;
+}
+#primary_nav_wrap ul li:hover
+{
+	background:#488dcc;
+}
+
+#primary_nav_wrap ul ul
+{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#fff;
+	padding:0
+}
+
+#primary_nav_wrap ul ul li
+{
+	float:none;
+	width:200px
+}
+
+#primary_nav_wrap ul ul a
+{
+	line-height:120%;
+	padding:10px 15px
+}
+
+#primary_nav_wrap ul ul ul
+{
+	top:0;
+	left:100%
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+	display:block;
+	
+  background-color:lightgray;
+}
+#collapse li .drop {
+	padding-right:25px;
+	background:url("../images/img/drop.gif") no-repeat right 16px;
+}
+
+#collapse li:hover .drop {
+	background:url("../images/img/drop.png") no-repeat right 14px;
+}

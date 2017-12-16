@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+   <title>EOL</title>
+   <head>
+   
+   
+   
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ui-grid.info/release/ui-grid.js"></script>
+<link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+   
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+     <link href="./js/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+ 
+ 
+  
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="./js/bootstrap.min.css">
+      
+       
+       <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+         <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid-unstable.css" type="text/css">
+   
+      
+       <script src="./js/controller.js"></script>
+   
+<link href="./css/my.css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="./js/ng-grid.min.css" />
+      <script src="./js/ng-grid-2.0.11.min.js"></script> 
+  
+        <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+   <!-- <script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>-->
+   
+    <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid-unstable.css" type="text/css">
+   
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+
+<link href="./css/menu.css" rel="stylesheet" />
+   </head>
+   
+   <body>
+  
+      <div class="container">
+      <h1 align="center"><b>TRAX Interface</b></h1>
+         
+         <section ng-app="app" ng-controller="TabController as tab">
+             
+             <nav >
+<ul id="menu">
+                 <li  ng-class="{active:tab.isSet(0)}"><a class="drop" href ng-click="#">Trades</a>  
+                 <div class="dropdown_1column align_left">
+        
+                <div class="col_1">
+                
+                    <ul class="greybox">
+	                 
+					        <li   ng-class="{active:tab.isSet(1)}">
+					           <a href ng-click="tab.setTab(1)">Transaction Monitor</a>
+					        </li>
+					       <!--  <li class="sublink" ng-class="{active:tab.isSet(0)}">
+					            <a href ng-click="tab.setTab(0)">Details</a>
+					        </li>   --> 
+	             	 </ul>
+	             	 </div>
+	             	 </div>
+     			 </li>
+     			 
+               <li  ng-class="{active:tab.isSet(2)}"><a  class="drop" href ng-click="#">Maintenance</a>
+                <div class="dropdown_3columns align_left">
+        <div class="col_1">
+                
+                    <ul class="greybox" >
+					        <li  ng-class="{active:tab.isSet(3)}">
+					           <a  href ng-click="tab.setTab(3)">FI Trade Control</a>
+					           
+					 	             	
+	             	        </li>
+					         <li  ng-class="{active:tab.isSet(4)}">
+					         <a href ng-click="tab.setTab(4)">Settlement Types </a>
+					        </li>   
+					         <li  ng-class="{active:tab.isSet(5)}">
+					            <a href ng-click="tab.setTab(5)">Repo Types</a>
+					        </li> 
+	             	 </ul>
+	             	 </div>
+	             	 </div>
+               </li>
+             </ul>
+             
+             
+
+      <div ng-show="tab.isSet(3)" >
+       
+        <div ng-include="'maint_ficontrol.html'"></div>
+       
+      </div>
+      
+      <div ng-show="tab.isSet(1)" id="grid">
+     	    <div ng-include="'monitors.html'"></div>
+      </div>
+      
+      <div ng-show="tab.isSet(4)">
+          <div ng-include="'maint_settlement.html'"></div>	
+      </div>
+      
+      <div ng-show="tab.isSet(5)">
+          <div ng-include="'maint_repo.html'"></div>	
+      </div>
+    </nav>
+         </section>
+      </div>
+
+   </body>
+
+</html>
